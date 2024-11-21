@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Multiclass classification of 5 common UK birds</h1>
+        <h2>Upload an Image for Prediction</h2>
+        <p>Please upload an image of either a <b>Swan,</b> <b>Sparrow,</b> <b>Robin,</b> <b>Goldfinch</b> or a <b>Magpie.</b></p>
+    
+        <!-- Error Message -->
+        {% if error %}
+            <p class="error_message">{{ error }}</p>
+        {% endif %}
+    
+        <!-- Upload Form -->
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload and Predict</button>
+        </form>
+    
+        {% if img_base64 %}
+            <div class="prediction_box">
+                <h2>Uploaded Image:</h2>
+                <img src="data:image/png;base64,{{ img_base64 }}" alt="Uploaded Image">
+                    <h2>Top Predictions:</h2>
+                    <ul>
+                        {% for prediction in top_predictions %}
+                        <li>{{ prediction[0] }}: {{ "{:.2f}".format(prediction[1]) }}%</li>
+                        {% endfor %}
+                    </ul>
+            </div>
+            
+        {% endif %}
+    </div>
+    
+</body>
+</html>
+

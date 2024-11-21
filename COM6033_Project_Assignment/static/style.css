@@ -29,14 +29,19 @@ body {
 
 /* Heading style */
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 20px;
 }
 
 h2 {
+    font-size: 2rem;
+    margin: 5px;
+}
+
+h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 /* Upload form styling */
@@ -74,14 +79,12 @@ p{
     margin: 8px;
 }
 
-/* Error message styling */
 .error_message {
     color: red;
     font-size: 1rem;
     margin-top: 10px;
 }
 
-/* Image container */
 img {
     max-width: 100%;
     height: auto;
@@ -99,23 +102,15 @@ img {
     margin-bottom: 20px;
 }
 
-/* Prediction list styling */
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
 }
 
 li {
     font-size: 1.2rem;
     color: #555;
     margin: 5px 0;
-}
-
-/* Styling for top predictions section */
-ul {
-    margin-top: 20px;
-}
-
-h2 + ul {
-    margin-top: 10px;
+    margin-top: 30px;
 }

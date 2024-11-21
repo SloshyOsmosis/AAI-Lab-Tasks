@@ -27,12 +27,13 @@
             <div class="prediction_box">
                 <h2>Uploaded Image:</h2>
                 <img src="data:image/png;base64,{{ img_base64 }}" alt="Uploaded Image">
-                    <h2>Top Predictions:</h2>
-                    <ul>
-                        {% for prediction in top_predictions %}
-                        <li>{{ prediction[0] }}: {{ "{:.2f}".format(prediction[1]) }}%</li>
-                        {% endfor %}
-                    </ul>
+                <h3>Prediction: {{ top_prediction[0] }} ({{ "{:.2f}".format(top_prediction[1]) }}%)</h3>
+                <h2>Other Predictions:</h2>
+                <ul>
+                    {% for prediction in top_predictions %}
+                    <li>{{ prediction[0] }}: {{ "{:.2f}".format(prediction[1]) }}%</li>
+                    {% endfor %}
+                </ul>
             </div>
             
         {% endif %}

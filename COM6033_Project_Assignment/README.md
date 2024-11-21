@@ -79,3 +79,6 @@ My management of the imbalanced datasets was seen as an opportunity to introduce
 
 Image datasets (Covered half of the dataset) - https://images.cv/search-labeled-image-dataset
 Image collection python library (Padding out the dataset for the smaller classes) - bing_image_downloader
+Tensorflow image classification - https://www.tensorflow.org/tutorials/keras/classification
+loading image dataset from directory - https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image_dataset_from_directory
+categorical crossentropy for multiclass classification - https://www.tensorflow.org/api_docs/python/tf/keras/losses/CategoricalCrossentropy

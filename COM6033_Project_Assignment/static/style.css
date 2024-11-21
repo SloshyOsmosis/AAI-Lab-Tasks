@@ -23,11 +23,10 @@ body {
 .wrapper {
     background-color: rgba(255, 255, 255, 0.85); /* White background with some transparency */
     padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading style */
 h1 {
     font-size: 2.5rem;
     color: #2c3e50;
@@ -44,7 +43,6 @@ h3 {
     margin: 5px;
 }
 
-/* Upload form styling */
 form {
     background-color: #fff;
     padding: 20px;
